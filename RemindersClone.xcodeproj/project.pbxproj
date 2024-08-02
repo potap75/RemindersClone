@@ -19,6 +19,7 @@
 		669618652C54C03200A60AC2 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618642C54C03200A60AC2 /* Color+Extensions.swift */; };
 		669618C92C59FF8C00A60AC2 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618C82C59FF8C00A60AC2 /* Reminder.swift */; };
 		669618CB2C5A0C3B00A60AC2 /* MyListDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618CA2C5A0C3B00A60AC2 /* MyListDetailScreen.swift */; };
+		669618CD2C5CA48D00A60AC2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618CC2C5CA48D00A60AC2 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		669618642C54C03200A60AC2 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		669618C82C59FF8C00A60AC2 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		669618CA2C5A0C3B00A60AC2 /* MyListDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListDetailScreen.swift; sourceTree = "<group>"; };
+		669618CC2C5CA48D00A60AC2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				669618642C54C03200A60AC2 /* Color+Extensions.swift */,
+				669618CC2C5CA48D00A60AC2 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				669618572C5362FA00A60AC2 /* MyListsScreen.swift in Sources */,
+				669618CD2C5CA48D00A60AC2 /* String+Extensions.swift in Sources */,
 				669618482C5360E200A60AC2 /* ContentView.swift in Sources */,
 				669618CB2C5A0C3B00A60AC2 /* MyListDetailScreen.swift in Sources */,
 				669618462C5360E200A60AC2 /* RemindersCloneApp.swift in Sources */,

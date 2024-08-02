@@ -19,7 +19,7 @@ class Reminder {
     
     var list: MyList?
     
-    init(title: String, notes: String? = nil, isComplete: Bool, reminderDate: Date? = nil, reminderTime: Date? = nil, list: MyList? = nil) {
+    init(title: String, notes: String? = nil, isComplete: Bool = false, reminderDate: Date? = nil, reminderTime: Date? = nil, list: MyList? = nil) {
         self.title = title
         self.notes = notes
         self.isComplete = isComplete
