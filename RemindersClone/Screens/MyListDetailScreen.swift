@@ -14,6 +14,8 @@ struct MyListDetailScreen: View {
     let myList: MyList
     @State private var reminderTitle: String = ""
     @State private var isNewReminderAlertPresented: Bool = false
+    @State private var selectedReminder: Reminder?
+    @State private var showReminderEditScreen: Bool = false
     
     private var isFormValid: Bool {
         !reminderTitle.isEmptyOrWithSpace
@@ -27,7 +29,17 @@ struct MyListDetailScreen: View {
     var body: some View {
         VStack {
             List(myList.reminders) { reminder in
-                Text(reminder.title)
+                ReminderCellView(reminder: reminder, isSelected: false) { event in
+                    switch event {
+                    case .onChecked(let reminder, let checked):
+                        reminder.isComplete = checked
+                    case .onSelect(let reminder):
+                        selectedReminder = reminder
+                    case .onInfoSelected(let reminder):
+                        showReminderEditScreen = true
+                        selectedReminder = reminder
+                    }
+                }
             }
             
             Spacer()
@@ -42,8 +54,7 @@ struct MyListDetailScreen: View {
             })
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-        }.navigationTitle(myList.name)
-            .alert("New Reminder", isPresented: $isNewReminderAlertPresented) {
+        }.alert("New Reminder", isPresented: $isNewReminderAlertPresented) {
                 TextField("", text: $reminderTitle)
                 Button("Cancel", role: .cancel) { }
                 Button("Done") {
@@ -52,6 +63,14 @@ struct MyListDetailScreen: View {
                     }
                 }
             }
+        .navigationTitle(myList.name)
+        .sheet(isPresented: $showReminderEditScreen, content: {
+            if let selectedReminder {
+                NavigationStack {
+                    ReminderEditScreen(reminder: selectedReminder)
+                }
+            }
+        })
     }
 }
 

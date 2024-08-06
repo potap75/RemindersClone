@@ -20,6 +20,8 @@
 		669618C92C59FF8C00A60AC2 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618C82C59FF8C00A60AC2 /* Reminder.swift */; };
 		669618CB2C5A0C3B00A60AC2 /* MyListDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618CA2C5A0C3B00A60AC2 /* MyListDetailScreen.swift */; };
 		669618CD2C5CA48D00A60AC2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618CC2C5CA48D00A60AC2 /* String+Extensions.swift */; };
+		669618D12C5D60DF00A60AC2 /* RreminderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618D02C5D60DF00A60AC2 /* RreminderCellView.swift */; };
+		669618D32C60975C00A60AC2 /* ReminderEditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618D22C60975C00A60AC2 /* ReminderEditScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		669618C82C59FF8C00A60AC2 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		669618CA2C5A0C3B00A60AC2 /* MyListDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListDetailScreen.swift; sourceTree = "<group>"; };
 		669618CC2C5CA48D00A60AC2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		669618D02C5D60DF00A60AC2 /* RreminderCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RreminderCellView.swift; sourceTree = "<group>"; };
+		669618D22C60975C00A60AC2 /* ReminderEditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				669618562C5362FA00A60AC2 /* MyListsScreen.swift */,
 				669618582C53662500A60AC2 /* AddMyListScreen.swift */,
 				669618CA2C5A0C3B00A60AC2 /* MyListDetailScreen.swift */,
+				669618D22C60975C00A60AC2 /* ReminderEditScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				6696185C2C53687100A60AC2 /* ColorPickerView.swift */,
+				669618D02C5D60DF00A60AC2 /* RreminderCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,9 +208,11 @@
 				669618CB2C5A0C3B00A60AC2 /* MyListDetailScreen.swift in Sources */,
 				669618462C5360E200A60AC2 /* RemindersCloneApp.swift in Sources */,
 				669618652C54C03200A60AC2 /* Color+Extensions.swift in Sources */,
+				669618D32C60975C00A60AC2 /* ReminderEditScreen.swift in Sources */,
 				669618592C53662500A60AC2 /* AddMyListScreen.swift in Sources */,
 				6696185D2C53687100A60AC2 /* ColorPickerView.swift in Sources */,
 				669618C92C59FF8C00A60AC2 /* Reminder.swift in Sources */,
+				669618D12C5D60DF00A60AC2 /* RreminderCellView.swift in Sources */,
 				669618622C54A73300A60AC2 /* PreviewContainer.swift in Sources */,
 				669618602C54A61400A60AC2 /* MyList.swift in Sources */,
 			);
