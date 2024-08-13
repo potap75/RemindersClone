@@ -21,16 +21,35 @@ struct ReminderCellView: View {
     let onEvent: (ReminderCellEvents) -> Void
     @State private var checked: Bool = false
     
+    let delay = Delay()
+    
+    private func formatReminderDate(_ date: Date) -> String {
+        if date.isToday {
+            return "Today"
+        } else if date.isTomorrow {
+            return "Tomorrow"
+        } else {
+            return date.formatted(date: .numeric, time: .omitted)
+        }
+    }
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(systemName: "circle")
+            Image(systemName: checked ? "circle.inset.filled" : "circle")
                 .font(.title)
                 .padding([.trailing], 5)
                 .onTapGesture {
                    
                     checked.toggle()
-                    onEvent(.onChecked(reminder, checked))
+                    
+                    // cancel old task
+                    delay.cancel()
+                    
+                    // call onCheckedChange inside the delay
+                    
+                    delay.performWork {
+                        onEvent(.onChecked(reminder, checked))
+                    }
                 }
             
             VStack {
@@ -47,11 +66,11 @@ struct ReminderCellView: View {
                 HStack {
                     
                     if let reminderDate = reminder.reminderDate {
-                        Text(reminderDate.formatted())
+                        Text(formatReminderDate(reminderDate))
                     }
                     
                     if let reminderTime = reminder.reminderTime {
-                        Text(reminderTime.formatted())
+                        Text(reminderTime, style: .time)
                             
                     }
                 }

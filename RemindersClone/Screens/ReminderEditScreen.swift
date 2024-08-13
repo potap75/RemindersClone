@@ -29,7 +29,7 @@ struct ReminderEditScreen: View {
     }
     
     private var isFormValid: Bool {
-        !title.isEmptyOrWithSpace
+        title.isEmptyOrWithSpace
     }
     
     var body: some View {
@@ -50,7 +50,9 @@ struct ReminderEditScreen: View {
                     }
                 }
                 if showCalendar {
-                    DatePicker("Select Date", selection: $reminderDate, displayedComponents: .date)
+                    
+                    DatePicker("Select Date", selection: $reminderDate, in: .now..., displayedComponents: .date)
+                    
                 }
                 
                 HStack {

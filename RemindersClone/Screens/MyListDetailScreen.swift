@@ -26,10 +26,14 @@ struct MyListDetailScreen: View {
         myList.reminders.append(reminder)
     }
     
+    private func isReminderSelected(_ reminder: Reminder) -> Bool {
+        reminder.persistentModelID == selectedReminder?.persistentModelID
+    }
+    
     var body: some View {
         VStack {
-            List(myList.reminders) { reminder in
-                ReminderCellView(reminder: reminder, isSelected: false) { event in
+            List(myList.reminders.filter{ !$0.isComplete } ) { reminder in
+                ReminderCellView(reminder: reminder, isSelected: isReminderSelected(reminder)) { event in
                     switch event {
                     case .onChecked(let reminder, let checked):
                         reminder.isComplete = checked
