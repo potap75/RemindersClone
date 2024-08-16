@@ -41,15 +41,8 @@ struct ReminderCellView: View {
                 .onTapGesture {
                    
                     checked.toggle()
+                    onEvent(.onChecked(reminder, checked))
                     
-                    // cancel old task
-                    delay.cancel()
-                    
-                    // call onCheckedChange inside the delay
-                    
-                    delay.performWork {
-                        onEvent(.onChecked(reminder, checked))
-                    }
                 }
             
             VStack {

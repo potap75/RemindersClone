@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		667D320E2C6F0E0B004826F9 /* MyListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667D320D2C6F0E0B004826F9 /* MyListCellView.swift */; };
 		669618462C5360E200A60AC2 /* RemindersCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618452C5360E200A60AC2 /* RemindersCloneApp.swift */; };
 		669618482C5360E200A60AC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669618472C5360E200A60AC2 /* ContentView.swift */; };
 		6696184C2C5360E500A60AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6696184B2C5360E500A60AC2 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		667D320D2C6F0E0B004826F9 /* MyListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListCellView.swift; sourceTree = "<group>"; };
 		669618422C5360E200A60AC2 /* RemindersClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindersClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669618452C5360E200A60AC2 /* RemindersCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersCloneApp.swift; sourceTree = "<group>"; };
 		669618472C5360E200A60AC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				6696185C2C53687100A60AC2 /* ColorPickerView.swift */,
 				669618D02C5D60DF00A60AC2 /* RreminderCellView.swift */,
+				667D320D2C6F0E0B004826F9 /* MyListCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				66FB2C332C6B1F09007451A8 /* Delay.swift in Sources */,
 				669618C92C59FF8C00A60AC2 /* Reminder.swift in Sources */,
 				669618D12C5D60DF00A60AC2 /* RreminderCellView.swift in Sources */,
+				667D320E2C6F0E0B004826F9 /* MyListCellView.swift in Sources */,
 				669618622C54A73300A60AC2 /* PreviewContainer.swift in Sources */,
 				669618602C54A61400A60AC2 /* MyList.swift in Sources */,
 				66FB2C302C6B1A60007451A8 /* Date+Extensions.swift in Sources */,
